@@ -214,6 +214,6 @@ window.addEventListener('resize', () => {
 });
 
 // Touch enhancement for mobile
-document.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-}, { passive: false });
+// document.addEventListener('touchstart', (e) => {
+//     e.preventDefault();
+// }, { passive: false });

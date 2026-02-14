@@ -527,9 +527,13 @@ body {
         font-size: 1em;
     }
     
+   .buttons {
+        position: relative;
+        z-index: 20 !important;
+    }
     .btn {
-        padding: 12px 20px;
-        font-size: 1em;
+        padding: 18px 30px;   /* bigger hit area for fingers */
+        font-size: 1.2em;
     }
     
     .ultimate {
@@ -543,4 +547,30 @@ body {
     .sad-emojis {
         font-size: 2.5em;
     }
+}
+
+
+.overlay.hidden {
+    display: none !important;   /* force it */
+    pointer-events: none !important;
+}
+
+#app, .step, .buttons, .btn {
+    position: relative;
+    z-index: 10;                /* make sure buttons are above backgrounds/particles */
+}
+
+.background-animation,
+.hearts-container,
+.stars-container,
+.roses-container,
+.hearts-overflow {
+    pointer-events: none !important;  /* already there, but reinforce */
+    z-index: -2 !important;
+}
+
+.btn {
+    /* ... existing */
+    touch-action: manipulation;   /* improves touch response, prevents double-tap zoom delay */
+    -webkit-tap-highlight-color: transparent;  /* removes ugly tap highlight on Android */
 }
