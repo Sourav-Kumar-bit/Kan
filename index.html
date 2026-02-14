@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Kangana, My Love 💕</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Step 1 -->
+        <section id="step1" class="step active">
+            <div class="background-animation hearts-bg"></div>
+            <div class="hearts-container">
+                <div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div>
+                <div class="heart"></div><div class="heart"></div><div class="heart"></div><div class="heart"></div>
+            </div>
+            <h1 class="glow entrance-slide">Happy Valentine's Day, Kangana! 💖</h1>
+            <blockquote class="quote fade-in-up">"In your light I learn how to love. In your beauty, how to make poems. You dance inside my chest where no one sees you, but sometimes I do, and that sight becomes this art." – Rumi</blockquote>
+            <p class="question pulse-text">I found you by chance on Instagram… and now you're my favorite person. You always listen and make me smile. Will you be my Valentine?</p>
+            <div class="buttons scale-in">
+                <button class="btn yes" onclick="nextStep(1, true)">Yes 😍</button>
+                <button class="btn no" onclick="nextStep(1, false)">No 😔</button>
+            </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section id="step2" class="step">
+            <div class="background-animation stars-bg"></div>
+            <div class="stars-container">
+                <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+                <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+            </div>
+            <h1 class="glow entrance-slide">You Light Up My Days, Kangana 🌟</h1>
+            <blockquote class="quote fade-in-up">"I love you without knowing how, or when, or from where. I love you straightforwardly, without complexities or pride; so I love you because I know no other way." – Pablo Neruda</blockquote>
+            <p class="question pulse-text">Every message from you makes my heart happy. Talking to you feels so special. Do you feel it too?</p>
+            <div class="buttons scale-in">
+                <button class="btn yes" onclick="nextStep(2, true)">Yes ✨</button>
+                <button class="btn no" onclick="nextStep(2, false)">No 💔</button>
+            </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section id="step3" class="step">
+            <div class="background-animation roses-bg"></div>
+            <div class="roses-container">
+                <div class="rose"></div><div class="rose"></div><div class="rose"></div><div class="rose"></div>
+                <div class="rose"></div><div class="rose"></div><div class="rose"></div><div class="rose"></div>
+            </div>
+            <h1 class="glow entrance-slide">You Mean Everything to Me 🌹</h1>
+            <blockquote class="quote fade-in-up">"To love is to recognize yourself in another. To love is to burn, to be on fire. To love at every glance, to tremble at the mere touch." – Jacques Prévert</blockquote>
+            <p class="question pulse-text">You're so kind and caring… I want to make you just as happy. Will you be mine?</p>
+            <div class="buttons scale-in">
+                <button class="btn yes final-yes" onclick="finalStep(true)">Yes, forever! 💍</button>
+                <button class="btn no" onclick="finalStep(false)">No 😢</button>
+            </div>
+        </section>
+
+        <!-- Final Yes -->
+        <section id="final-yes" class="step final">
+            <canvas id="confetti-canvas"></canvas>
+            <div class="background-animation celebration-bg"></div>
+            <h1 class="glow ultimate entrance-bounce">Kangana, I Love You ❤️</h1>
+            <blockquote class="quote fade-in-up ultimate-quote">"Grow old along with me! The best is yet to be..." – Robert Browning</blockquote>
+            <p class="final-message pulse-text">Thank you for saying yes. You're my favorite person in the world. 💕</p>
+            <div class="hearts-overflow">
+                <div class="heart-float"></div><div class="heart-float"></div><div class="heart-float"></div><div class="heart-float"></div>
+                <div class="heart-float"></div><div class="heart-float"></div><div class="heart-float"></div><div class="heart-float"></div>
+            </div>
+            <button class="btn restart" onclick="restart()">Start Again</button>
+        </section>
+
+        <!-- Sad Overlay -->
+        <div id="sad-overlay" class="overlay hidden">
+            <div class="sad-content">
+                <div id="sad-title" class="sad-glow"></div>
+                <div id="sad-message" class="sad-message"></div>
+                <div id="sad-animations" class="sad-animations"></div>
+                <div id="sad-emojis" class="sad-emojis"></div>
+                <button id="retry-btn" class="btn restart-sad" onclick="retryCurrentStep()">Try this step again?</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
